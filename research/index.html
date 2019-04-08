@@ -5,63 +5,105 @@ title: Research
 	<h1>Research</h1>
 	<p>
     This is a list of papers I've worked on organized by topic.
+    I've tried to give a brief summary for each paper.
   </p>
 
 	<h2>GANs</h2>
 	<p>
     <a href="https://arxiv.org/abs/1610.09585"><b>Conditional image synthesis with auxiliary classifier gans</b></a><br>
     <b>A Odena</b>, C Olah, J Shlens<br>
-    <i>ICML 2017</i><br><br>
+    <i>ICML 2017</i><br>
+    <small>
+      This was arguably the first paper in which GANs were made to work on the ImageNet dataset.
+      We gave a way to use label information to improve image synthesis performance.
+    </small><br><br>
 
     <a href="https://arxiv.org/abs/1805.08318"><b>Self-attention generative adversarial networks</b></a><br>
     H Zhang, I Goodfellow, D Metaxas, <b>A Odena</b><br>
-    <i>Preprint</i><br><br>
+    <i>Preprint</i><br>
+    <small>
+      We propose several tweaks to the GAN training procedure that dramatically improve image synthesis performance.
+      <a href="https://arxiv.org/abs/1809.11096">BigGAN</a> is based on this work.
+      Source code is available <a href="https://github.com/brain-research/self-attention-gan">here</a>.
+    </small><br><br>
 
     <a href="https://arxiv.org/abs/1802.08768"><b>Is Generator Conditioning Causally Related to GAN Performance?</b></a><br>
     <b>A Odena</b>, J Buckman, C Olsson, T B Brown, C Olah, C Raffel, I Goodfellow<br>
-    <i>ICML 2018</i><br><br>
+    <i>ICML 2018</i><br>
+    <small>
+      We show that the conditioning of the input-output jacobian of GAN generators is predictive of many GAN training pathologies. 
+      We then give evidence that the relationship is causal by conducting an intervention that clips the range of the jacobian singular values.
+    </small><br><br>
 
     <a href="https://arxiv.org/abs/1810.06758"><b>Discriminator Rejection Sampling</b></a><br>
     S Azadi, C Olsson, T Darrell, I Goodfellow, <b>A Odena</b><br>
-    <i>ICLR 2019</i><br><br>
+    <i>ICLR 2019</i><br>
+    <small>
+      We show that GAN discriminators can be used after training is finished to perform rejection sampling on GAN generators.
+    </small><br><br>
 
     <a href="https://arxiv.org/abs/1808.04888"><b>Skill Rating for Generative Models</b></a><br>
     C Olsson, S Bhupatiraju, T B Brown, <b>A Odena</b>, I Goodfellow<br>
-    <i>Preprint</i><br><br>
+    <i>Preprint</i><br>
+    <small>
+      We show how to use chess-style tournament ranking to evaluate GANs and other generative models.
+    </small><br><br>
 
   </p>
 
 	<h2>Semi-Supervised Learning</h2>
 	<p>
-
     <a href="https://arxiv.org/abs/1606.01583"><b>Semi-supervised learning with generative adversarial networks</b></a><br>
     <b>A Odena</b><br>
-    <i>Workshop on Data-Efficient Machine Learning (ICML 2016)</i><br><br>
+    <i>Workshop on Data-Efficient Machine Learning (ICML 2016)</i><br>
+    <small>
+      I invented (concurrent with <a href="https://arxiv.org/abs/1606.03498">this paper</a>) a techique for using GANs
+      to do semi-supervised learning.
+    </small><br><br>
 
     <a href="https://arxiv.org/abs/1804.09170"><b>Realistic Evaluation of Deep Semi-Supervised Learning Algorithms</b></a><br>
     A Oliver*, <b>A Odena*</b>, C Raffel*, ED Cubuk, IJ Goodfellow<br>
-    <i>NeurIPS 2018 (Spotlight)</i><br><br>
-
+    <i>NeurIPS 2018 (Spotlight)</i><br>
+    <small>
+      We argue that existing methods for evaluating semi-supervised learning techniques are flawed and propose a new framework
+      for doing these evaluations.
+      Source code is available <a href="https://github.com/brain-research/realistic-ssl-evaluation">here</a>.
+    </small><br><br>
   </p>
 
 	<h2>Machine Learning and Computer Systems</h2>
 	<p>
     <a href="https://arxiv.org/abs/1807.10875"><b>Tensorfuzz: Debugging neural networks with coverage-guided fuzzing</b></a><br>
     <b>A Odena</b>, C Olsson, D Anderson, I Goodfellow<br>
-    <i>Preprint</i><br><br>
+    <i>Preprint</i><br>
+    <small>
+      We apply the notions of coverage-guided-fuzzing and property-based-testing to neural networks.
+      We show that approximate-nearest-neighbors algorithms can give useful coverage metrics in this context.
+      Source code is available <a href="https://github.com/brain-research/tensorfuzz">here</a>.
+    </small><br><br>
 
     <a href="https://arxiv.org/abs/1601.04033"><b>Faster Asynchronous SGD</b></a><br>
     <b>A Odena</b><br>
-    <i>Workshop on Optimization Methods for the Next Generation of Machine Learning (ICML) 2016</i><br><br>
+    <i>Workshop on Optimization Methods for the Next Generation of Machine Learning (ICML) 2016</i><br>
+    <small>
+      I speed up asynchronous SGD by quantifying gradient update staleness in terms of moving averages of gradient statistics.
+    </small><br><br>
   </p>
 
 	<h2>Miscellaneous Machine Learning</h2>
 	<p>
     <a href="https://distill.pub/2016/deconv-checkerboard/"><b>Deconvolution and checkerboard artifacts</b></a><br>
     <b>A Odena</b>, V Dumoulin, C Olah<br>
-    <i>Distill</i><br><br>
+    <i>Distill</i><br>
+    <small>
+      We show that the ubiquitous "deconvolution" operation used in image-upsampling produces strange checkerboard-artifacts.
+      We then propose a simple fix.
+    </small><br><br>
 
     <a href="https://arxiv.org/abs/1702.07780"><b>Changing Model Behavior at Test-Time Using Reinforcement Learning</b></a><br>
     <b>A Odena</b>, D Lawson, C Olah<br>
-    <i>ICLR 2017 (Workshop Track)</i><br><br>
+    <i>ICLR 2017 (Workshop Track)</i><br>
+    <small>
+      I show how to change the test-time resource-usage of neural networks on a per-input basis using reinforcement learning.
+    </small><br><br>
   </p>
