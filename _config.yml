@@ -1,2 +1,5 @@
 name: Augustus Odena
 markdown: kramdown
+exclude:
+  - script
+  - README.md

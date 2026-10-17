@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+if [[ -x /opt/homebrew/opt/ruby/bin/ruby ]]; then
+  export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+fi
+bundle config set --local path vendor/bundle
+bundle install
